@@ -1,6 +1,12 @@
 cmpe273-lab2
 ============
 
+Assignment for CMPE Lab - 2
+Author : Mario Vinay (Forked baseline from Sithu Aung)
+Date: 17-Sept-2014
+
+========================================================
+
 Node.JS with [Connect]
 
 ### To Install Dependencies ###

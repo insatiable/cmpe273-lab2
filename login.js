@@ -45,7 +45,29 @@ Login.prototype.logout = function(sessionId) {
    /*
 	* TODO: Remove the given sessionId from the sessionMap
 	*/
+
+	/* newly added code stars */
+	delete this.sessionMap[sessionId];
+	return null;
+	/* newly added code ends */
 };
+
+/* Newly added code starts */
+Login.prototype.displaySessions = function() {
+	return this.sessionMap;
+};
+
+Login.prototype.update = function(sessionId) {
+	var username = this.sessionMap[sessionId].name;
+	var useremail = this.sessionMap[sessionId].email;
+
+	var newSessionId = new Date().getTime();
+	this.sessionMap[newSessionId] = { name: username, email: useremail } 
+	delete this.sessionMap[sessionId];
+	return newSessionId;
+};
+
+/* Newly added code ends */
 
 // Export the Login class
 module.exports = new Login();
